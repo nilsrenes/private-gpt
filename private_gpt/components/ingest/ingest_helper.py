@@ -24,6 +24,7 @@ def _try_loading_included_file_formats() -> dict[str, type[BaseReader]]:
         from llama_index.readers.file.mbox import MboxReader  # type: ignore
         from llama_index.readers.file.slides import PptxReader  # type: ignore
         from llama_index.readers.file.tabular import PandasCSVReader  # type: ignore
+        from llama_index.readers.file.tabular import PandasExcelReader  # type: ignore
         from llama_index.readers.file.video_audio import (  # type: ignore
             VideoAudioReader,
         )
@@ -43,6 +44,7 @@ def _try_loading_included_file_formats() -> dict[str, type[BaseReader]]:
         ".mp3": VideoAudioReader,
         ".mp4": VideoAudioReader,
         ".csv": PandasCSVReader,
+        ".xlsx": PandasExcelReader,
         ".epub": EpubReader,
         ".md": MarkdownReader,
         ".mbox": MboxReader,
